@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "start:getting-started":"ng serve --project=getting-started --port 4000"
+    "start:getting-started":"ng serve --project=getting-started --port 4100",
+    "start:my-getting-started":"ng serve --project=my-getting-started --port 4000"
   },
   "private": true,
   "dependencies": {
@@ -34,6 +35,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "ng-packagr": "^16.2.0",
     "typescript": "~5.1.3"
   }
 }
