@@ -1,0 +1,13 @@
+<h2>Mobiles</h2>
+
+<div *ngFor="let mobile of mobiles">
+    <h3>
+        <a [title]="mobile.name + ' details'">{{ mobile.name }}</a>
+    </h3>
+
+    <p *ngIf="mobile.description">Description: {{ mobile.description }}</p>
+
+    <button type="button" (click)="share()">Share</button>
+
+    <app-mobile-alerts [mobile]="mobile" (notify)="onNotify()"></app-mobile-alerts>
+</div>
