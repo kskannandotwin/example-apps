@@ -1,1 +1,7 @@
-<p>mobile-details works!</p>
+<h2>Mobile Details</h2>
+
+<div *ngIf="mobile">
+    <h3>{{ mobile.name }}</h3>
+    <h4>{{ mobile.price | currency }}</h4>
+    <p>{{ mobile.description }}</p>
+</div>

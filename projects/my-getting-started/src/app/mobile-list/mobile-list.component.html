@@ -2,7 +2,7 @@
 
 <div *ngFor="let mobile of mobiles">
     <h3>
-        <a [title]="mobile.name + ' details'">{{ mobile.name }}</a>
+        <a [title]="mobile.name + ' details'" [routerLink]="['/mobiles', mobile.id]">{{ mobile.name }}</a>
     </h3>
 
     <p *ngIf="mobile.description">Description: {{ mobile.description }}</p>
