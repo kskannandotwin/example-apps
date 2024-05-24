@@ -9,20 +9,14 @@ import { Hero } from '../hero';
 })
 export class HeroesComponent {
 
-  hero: Hero = {
-    id: 1,
-    name: 'Windstorm'
-  };
-  // heroes = HEROES;
+  heroes = HEROES;
+  selectedHero?: Hero;
 
-  // selectedHero?: Hero;
-  // hero = 'Windstorm';
+  onSelect(hero: Hero): void{
+    this.selectedHero = hero;
+  }
 
-  // onSelect(hero: Hero): void{
-  //   this.selectedHero = hero;
-  // }
-
-  // gotoDetail() {
-  //   console.log('detail');
-  // }
+  gotoDetail() {
+    console.log('detail');
+  }
 }
