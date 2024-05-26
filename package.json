@@ -7,9 +7,9 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "start:getting-started":"ng serve --project=getting-started --port 4100",
-    "start:my-getting-started":"ng serve --project=my-getting-started --port 4000",
-    "start:tour-of-heroes":"ng serve --project=tour-of-heroes --port 4200"
+    "start:getting-started": "ng serve --project=getting-started --port 4100",
+    "start:my-getting-started": "ng serve --project=my-getting-started --port 4000",
+    "start:tour-of-heroes": "ng serve --project=tour-of-heroes --port 4200"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +21,7 @@
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
+    "angular-in-memory-web-api": "^0.18.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
