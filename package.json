@@ -9,7 +9,8 @@
     "test": "ng test",
     "start:getting-started": "ng serve --project=getting-started --port 4100",
     "start:my-getting-started": "ng serve --project=my-getting-started --port 4000",
-    "start:tour-of-heroes": "ng serve --project=tour-of-heroes --port 4200"
+    "start:tour-of-heroes": "ng serve --project=tour-of-heroes --port 4300",
+    "start:first-app": "ng serve --project=first-app --port 4200"
   },
   "private": true,
   "dependencies": {
