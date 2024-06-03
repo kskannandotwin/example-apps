@@ -1,1 +1,15 @@
 <h1>Animations</h1>
+
+<input type="checkbox" id="animation-toggle" [checked]="!animationsDisabled" (click)="toggleAnimations()">
+<label for="animation-toggle">Toggle all animations</label>
+
+<nav>
+    <a id="home" routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
+    <a id="about" routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">About</a>
+    <a id="open-close" routerLink="/open-close" routerLinkActive="active" ariaCurrentWhenActive="page">Open/Close</a>
+    <a id="status" routerLink="/status" routerLinkActive="active" ariaCurrentWhenActive="page">Status Slider</a>
+</nav>
+
+<div [@routeAnimations]="getRouteAnimationData()">
+    <router-outlet></router-outlet>
+</div>
