@@ -1,5 +1,5 @@
 <ul class="heroes">
-    <li *ngFor="let hero of heroes" [@flyInOut]="'in'">
+    <li *ngFor="let hero of heroes" [@shrinkOut]="'in'">
         <button type="button" class="inner" (click)="removeHero(hero.id)">
             <span class="badge">{{hero.id}}</span>
             <span class="name">{{hero.name}}</span>

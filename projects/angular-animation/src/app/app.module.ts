@@ -10,6 +10,15 @@ import { AboutComponent } from './about/about.component';
 import { HeroListEnterLeavePageComponent } from './hero-list-enter-leave-page/hero-list-enter-leave-page.component';
 import { HeroListEnterLeaveComponent } from './hero-list-enter-leave/hero-list-enter-leave.component';
 import { StatusSliderComponent } from './status-slider/status-slider.component';
+import { ToggleAnimationsPageComponent } from './toggle-animations-page/toggle-animations-page.component';
+import { OpenCloseChildComponent } from './open-close-child/open-close-child.component';
+import { HeroListAutoPageComponent } from './hero-list-auto-page/hero-list-auto-page.component';
+import { HeroListAutoComponent } from './hero-list-auto/hero-list-auto.component';
+import { HeroListPageComponent } from './hero-list-page/hero-list-page.component';
+import { HeroListGroupPageComponent } from './hero-list-group-page/hero-list-group-page.component';
+import { HeroListGroupsComponent } from './hero-list-groups/hero-list-groups.component';
+import { InsertRemoveComponent } from './insert-remove/insert-remove.component';
+import { QueryingComponent } from './querying/querying.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +28,16 @@ import { StatusSliderComponent } from './status-slider/status-slider.component';
     AboutComponent,
     HeroListEnterLeavePageComponent,
     HeroListEnterLeaveComponent,
-    StatusSliderComponent
+    StatusSliderComponent,
+    ToggleAnimationsPageComponent,
+    OpenCloseChildComponent,
+    HeroListAutoPageComponent,
+    HeroListAutoComponent,
+    HeroListPageComponent,
+    HeroListGroupPageComponent,
+    HeroListGroupsComponent,
+    InsertRemoveComponent,
+    QueryingComponent
   ],
   imports: [
     BrowserModule,

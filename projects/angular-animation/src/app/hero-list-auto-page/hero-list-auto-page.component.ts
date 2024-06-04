@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { HEROES } from '../mock-heroes';
 
 @Component({
-  selector: 'app-hero-list-enter-leave-page',
-  templateUrl: './hero-list-enter-leave-page.component.html',
-  styleUrls: ['./hero-list-enter-leave-page.component.scss']
+  selector: 'app-hero-list-auto-page',
+  templateUrl: './hero-list-auto-page.component.html',
+  styleUrls: ['./hero-list-auto-page.component.scss']
 })
-export class HeroListEnterLeavePageComponent {
+export class HeroListAutoPageComponent {
   heroes = HEROES.slice();
 
   onRemove(id: number) {
