@@ -1,3 +1,6 @@
+<label for="search">Search Heroes:</label>
+<input type="text" id="search" #criteria (input)="updateCriteria(criteria.value)" placeholder="Search heroes">
+
 <ul class="heroes">
     <li *ngFor="let hero of heroes" class="hero">
         <div class="inner">
