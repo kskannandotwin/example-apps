@@ -19,6 +19,7 @@ import { HeroListGroupPageComponent } from './hero-list-group-page/hero-list-gro
 import { HeroListGroupsComponent } from './hero-list-groups/hero-list-groups.component';
 import { InsertRemoveComponent } from './insert-remove/insert-remove.component';
 import { QueryingComponent } from './querying/querying.component';
+import { MeOpenCloseChildComponent } from './me-open-close-child/me-open-close-child.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { QueryingComponent } from './querying/querying.component';
     HeroListGroupPageComponent,
     HeroListGroupsComponent,
     InsertRemoveComponent,
-    QueryingComponent
+    QueryingComponent,
+    MeOpenCloseChildComponent
   ],
   imports: [
     BrowserModule,

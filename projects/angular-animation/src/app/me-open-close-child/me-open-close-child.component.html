@@ -1,0 +1,5 @@
+<button (click)="toggle()">Toggle</button>
+<button (click)="disableAnimation()">Disable animation</button>
+<div [@.disabled] = 'isDisabled' [@openClose]>
+    <div class="box" [@openClose]="isOpen ? 'yellow' : 'red'"></div>
+</div>
