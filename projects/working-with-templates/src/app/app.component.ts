@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'working-with-templates';
+
+  progress = 0;
+
+  setProgress($event: Event) {
+    this.progress = +($event.target as HTMLInputElement).value;
+  }
 }
