@@ -8,9 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'working-with-templates';
 
-  progress = 0;
-
-  setProgress($event: Event) {
-    this.progress = +($event.target as HTMLInputElement).value;
-  }
+  actionName = 'Create and set an attribute';
+  isSpecial = true;
+  canSave = true;  
+  classExpression = 'special clearance';
+  styleExpression = 'border: solid red 3px';
+  color = 'blue';
+  border = '.5rem dashed black';
 }
