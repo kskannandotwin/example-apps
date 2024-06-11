@@ -1,50 +1,28 @@
-<h1>Attribute, class, and style bindings</h1>
+<h1>My first attribute directive</h1>
 
-<h2>Attribute binding</h2>
-
-<table border="1">
-  <tr>
-    <td [attr.colspan]="1 + 1">One-Two</td>
-  </tr>
-  <tr>
-    <td colSpan="{{ 1 + 1}}">Three-Four</td>
-  </tr>
-  <tr>
-    <td>Five</td>
-    <td>Six</td>
-  </tr>
-</table>
-<br>
+<h2>Pick a highlight color</h2>
 
 <div>
-  <button type="button" [attr.aria-laebl]="actionName">{{ actionName }} with Aria</button>
+  <input type="radio" name="colors" (click)="color = 'lightgreen'">Green
+  <input type="radio" name="colors" (click)="color = 'yellow'">Yellow
+  <input type="radio" name="colors" (click)="color = 'cyan'">Cyan
 </div>
+
+<p [appHighlight]="color">Highlight me!</p>
+
+<p [appHighlight]="color" defaultColor="violet">
+  Highlight me too!
+</p>
+<hr>
+<h2>Mouse over the following lines to see fixed highlights</h2>
+
+<p [appHighlight]="'yellow'">Highlighted in yellow</p>
+<p appHighlight="orange">Highlighted in orange</p>
 <hr>
 
-<h2>Styling precedence</h2>
+<h2>ngNonBindable</h2>
+<p>Use ngNonBindable to stop evaluation.</p>
+<p ngNonBindable>This should not evaluate: {{ 1 + 1 }}</p>
 
-<h3>Basic specificity</h3>
-
-<div [class.special]="isSpecial" [class]="classExpression">Some text</div>
-<div [class.border]="border" [style]="styleExpression">Some text</div>
-
-<h3>Source specificity</h3>
-<app-comp-with-host-binding [class.special]="isSpecial" dirWithClassBinding></app-comp-with-host-binding>
-
-<div>
-  <app-comp-with-host-binding [style.color]="color" dirWithStyleBinding></app-comp-with-host-binding>
-</div>
-
-<h3>Dynamic vs static</h3>
-
-<div class="special" [class.special]="false">Some text</div>
-
-<div style="border: dotted darkblue 3px" [style]="styleExpression">Some text</div>
-
-<div class="readability">
-  <app-comp-with-host-binding dirWithHostBinding></app-comp-with-host-binding>
-</div>
-
-<app-single-and-multiple-style-binding></app-single-and-multiple-style-binding>
-
-<app-my-input-with-attribute-decorator type="number"></app-my-input-with-attribute-decorator>
+<h2>ngNonBindable with a directive</h2>
+<p ngNonBindable [appHighlight]="'yellow'">This should not evaluate: {{ 1 + 1 }}, but will highlight yellow</p>
