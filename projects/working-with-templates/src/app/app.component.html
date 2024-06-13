@@ -1,28 +1,40 @@
-<h1>My first attribute directive</h1>
-
-<h2>Pick a highlight color</h2>
-
 <div>
-  <input type="radio" name="colors" (click)="color = 'lightgreen'">Green
-  <input type="radio" name="colors" (click)="color = 'yellow'">Yellow
-  <input type="radio" name="colors" (click)="color = 'cyan'">Cyan
+  <h1>Binding Syntax</h1>
+  <hr>
+
+  <div>
+    <h2>Button disabled state bound to isUnchanged property</h2>
+    <button type="button" [disabled]="isUnchanged">Save</button>
+  </div>
+  <hr>
+
+  <div>
+    <h2>HTML attributes and DOM properties</h2>
+    <p>1. Use the inspector to see the HTML attribute and DOM property values. Click the buttons to log values to the
+      console.
+    </p>
+    <label for="html-attr">HTML attribute Initializes to "Sarah":
+      <input type="text" id="html-attr" value="Sarah" #bindingInput>
+    </label>
+    <div>
+      <button type="button" (click)="getHTMLAttributeValue()">Get HTML Attribute value</button>Won't change.
+    </div>
+    <div>
+      <button type="button" (click)="getDOMPropertyValue()">Get DOM Property value</button>Changeable. Angular work with
+      these.
+    </div>
+    <p>2. Change the name in the input and click the buttons again.</p>
+  </div>
+  <hr>
+
+  <div>
+    <h3>Disabled property vs. attribute</h3>
+    <p>Use the inspector to see the Test Button work and its disabled property toggle.</p>
+    <div>
+      <button type="button" id="testButton" (click)="working()">Test Button</button>
+    </div>
+    <div>
+      <button type="button" (click)="toggleDisabled()">Toggle disabled property for Test Button</button>
+    </div>
+  </div>
 </div>
-
-<p [appHighlight]="color">Highlight me!</p>
-
-<p [appHighlight]="color" defaultColor="violet">
-  Highlight me too!
-</p>
-<hr>
-<h2>Mouse over the following lines to see fixed highlights</h2>
-
-<p [appHighlight]="'yellow'">Highlighted in yellow</p>
-<p appHighlight="orange">Highlighted in orange</p>
-<hr>
-
-<h2>ngNonBindable</h2>
-<p>Use ngNonBindable to stop evaluation.</p>
-<p ngNonBindable>This should not evaluate: {{ 1 + 1 }}</p>
-
-<h2>ngNonBindable with a directive</h2>
-<p ngNonBindable [appHighlight]="'yellow'">This should not evaluate: {{ 1 + 1 }}, but will highlight yellow</p>
