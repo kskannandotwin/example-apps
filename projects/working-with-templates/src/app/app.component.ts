@@ -7,11 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'working-with-templates';
-  subTitle = 'Built-in Template Functions';
-
-  item = {
-    name: 'Telephone',
-    origin: 'Sweden',
-    price: 98
-  };
+  subTitle = 'Content Projection';
 }
