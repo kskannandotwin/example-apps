@@ -1,29 +1,46 @@
-<h2>Angular and Content Projection</h2>
-<app-zippy-basic>
-    <p>Is content projection cool?</p>
-</app-zippy-basic>
-<hr>
+<div>
+    <h1>Interpolation and Template Expressions</h1>
+    <hr>
 
-<app-zippy-multislot>
-    <p question>
-        Is content projection cool?
-    </p>
-    <p>Let's learn about content projection!</p>
-</app-zippy-multislot>
-<hr>
+    <div>
+        <h2>Interpolation</h2>
+        <h3>Current customer: {{ currentCustomer }}</h3>
 
-<h2>Here is a zippy!</h2>
-<app-example-zippy>
-    <button type="button" appExampleZippyToggle>Is content projection cool?</button>
-    <ng-template appExampleZippyContent>
-        It depends on what you do with it.
-    </ng-template>
-</app-example-zippy>
-<hr>
+        <p>{{ title }}</p>
+        <div>
+            <img src="{{ itemImageUrl }}" alt="item">
+        </div>
 
-<app-zippy-ngprojectas>
-    <p>Let's learn about content projection!</p>
-    <ng-container ngProjectAs="[question]">
-        <p>Is content projection cool?</p>
-    </ng-container>
-</app-zippy-ngprojectas>
+        <h3>Evaluating template expressions</h3>
+        <h4>Simple evaluation (to a string):</h4>
+
+        <!-- "The sum of 1 + 1 is 2" -->
+        <p>The sum of 1 + 1 is {{ 1 + 1}}</p>
+        
+        <h4>Evaluates using a method (also evaluates to a string):</h4>
+        <!-- The sum of 1 + 1 is not 4 -->
+        <p>The sum of 1 + 1 is not {{ 1 + 1 + getVal() }}</p>
+    </div>
+    <hr>
+
+    <h2>Expression Context</h2>
+    <div>
+        <h3>Component context: properties of app.component.ts:</h3>
+        <h4>{{ recommended }}</h4>
+        <img src="{{ itemImageUrl2 }}" alt="item 2">
+    </div>
+
+    <div>
+        <h4>Template context: template input variables (let customer):</h4>
+        <ul>
+            <li *ngFor="let customer of customers">{{ customer.name }}</li>
+        </ul>
+    </div>
+
+    <div>
+        <h4>Template context: template reference variables (#customerInput):</h4>
+        <label for="customerInput">Type something:
+            <input type="text" id="customerInput" #customerInput>{{ customerInput.value }}
+        </label>
+    </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CUSTOMERS } from './customers';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'working-with-templates';
-  subTitle = 'Content Projection';
+  customers = CUSTOMERS;
+  currentCustomer = 'Maria';
+
+  title = 'Featured Product';
+  itemImageUrl = '../assets/potted-plant.svg';
+  recommended = 'You might also like:';
+
+  itemImageUrl2 = '../assets/lamp.svg';
+
+  getVal():number {
+    return 2;
+  }
 }
