@@ -1,57 +1,84 @@
-<h1>{{ title }}</h1>
-<hr>
-
-<h2 id="pipes">Pipes</h2>
-<p>Title through uppercase pipe: {{title | uppercase}}</p>
-<!-- convert title to uppercase, then to lowercase -->
-<p>Title through a pipe chain: {{title | uppercase | lowercase}}</p>
-
-<!-- pipe with configuration argument => "February 25, 1980" -->
-<p>Manufacture date with date format pipe: {{item.manufactureDate | date:'longDate'}}</p>
-<p>Manufacture date with uppercase pipe: {{(item.manufactureDate | date:'longDate') | uppercase}}</p>
-<p>Item json pipe: {{item | json}}</p>
-
-<p>Price with currency pipe: {{item.price | currency:'USD'}}</p>
-<hr />
-
-<h2>Safe navigation operator: <code>?</code> and <code>null</code></h2>
-<p>The item name is: {{item.name}}</p>
-<p>The nullItem name is: {{nullItem?.name}}</p>
-<hr />
-
-<h2>Error because nullItem is null:</h2>
-<!-- uncomment to see error in console -->
-<!-- <p>The null item's name is {{nullItem.name}}</p> -->
+<h1>Template reference variables</h1>
 
 <div>
-    <p>Uncomment above paragraph and see console log for error about nullItem.name:</p>
-    <p class="error">TypeError: Cannot read property 'name' of null</p>
-</div>
-<hr />
-
-<h2>The div will not display and there's no error: </h2>
-<div class="no-show-div">
-    <p>There's a child paragraph element in here that doesn't show. </p>
-    <p *ngIf="nullItem">The null item's name {{nullItem.name}}</p>
-</div>
-<hr />
-
-<h2>Div shows but interpolation doesn't:</h2>
-<div>
-    <h3>Using and (<code>&&</code>)</h3>
-    <p>The null item's name is: {{nullItem && nullItem.name}}</p>
-</div>
-
-<div>
-    <h3>Using safe navigation operator (<code>?</code>)</h3>
-    <!-- No item, no problem! -->
-    <p>The null item's name is: {{nullItem?.name}}</p>
+    <h2>Pass value to an event handler</h2>
+    <p>See console for output</p>
+    <input #phone placeholder="Phone number">
+    <!-- lots of other elements -->
+    <!-- phone refers to the input element; pass its `value` to an event handler -->
+    <button type="button" (click)="callPhone(phone.value)">Call</button>
 </div>
 <hr>
 
-<!-- non-null assertion operator -->
-<h2>Non-null assertion operator (<code>!</code>)</h2>
 <div>
-    <!-- Assert color is defined, even if according to the `Item` type it could be undefined. -->
-    <p>The item's color is: {{item.color!.toUpperCase()}}</p>
+    <h2>Template reference variable with disabled button</h2>
+    <p>btn refers to the button element.</p>
+    <button type="button" #btn disabled [innerHTML]="'disabled by attribute: ' + btn.disabled"></button>
 </div>
+<hr>
+
+<h2>Reference variables, forms, and NgForm</h2>
+<form #itemForm="ngForm" (ngSubmit)="onSubmit(itemForm)">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" ngModel required>
+    <button type="submit">Submit</button>
+</form>
+
+<div [hidden]="!itemForm.form.valid">
+    <p>{{ submitMessage }}</p>
+</div>
+
+<p>JSON: {{ itemForm.form.value | json }}</p>
+<hr>
+
+<h2>Template Reference Variable Scope</h2>
+<p>This section demonstrates in which situations you can access local template reference variables (<code>#ref</code>).
+</p>
+
+<h3>Accessing in a child template</h3>
+<!-- Accessing a template reference variable from an inner template
+  works as the context is inherited. Try changing the text in the
+  input to see how it is immediately reflected through the template
+  reference variable. -->
+
+<div class="example">
+    <input #ref1 type="text" [(ngModel)]="firstExample" />
+    <span *ngIf="true">Value: {{ ref1.value }}</span>
+</div>
+
+<!-- In this case there's a "hidden" ng-template around the
+  span and the definition of the variable is outside of it.
+  Thus, you access a template variable from a parent template
+  (which is logical as the context is inherited). -->
+
+<p>Here's the desugared syntax:</p>
+<pre><code [innerText]="desugared1"></code></pre>
+
+<h3>Accessing from outside parent template. (Doesn't work.)</h3>
+<!-- Accessing the template reference variable from outside the parent template does
+not work. The value to the right is empty and changing the
+value of the input will have no effect. -->
+
+<div class="example">
+    <input *ngIf="true" #ref2 type="text" [(ngModel)]="secondExample" />
+    <!-- <span>Value: {{ ref2?.value }}</span> -->
+    <!-- uncomment the above and the app breaks -->
+</div>
+
+<p>Here's the desugared syntax:</p>
+<pre><code [innerText]="desugared2"></code></pre>
+
+<h3>*ngFor and template reference variable scope</h3>
+
+<!-- The template is instantiated twice because *ngFor iterates
+  over the two items in the array, so it's impossible to define what ref2 is referencing. -->
+
+<pre><code [innerText]="ngForExample"></code></pre>
+
+<h3>Accessing a on an <code>ng-template</code></h3>
+
+See the console output to see that when you declare the variable on an <code>ng-template</code>, the variable refers to
+a <code>TemplateRef</code> instance, which represents the template.
+
+<ng-template #ref3></ng-template>
+<button type="button" (click)="log(ref3)">Log type of #ref</button>
