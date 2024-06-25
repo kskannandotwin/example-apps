@@ -1,8 +1,10 @@
-div {
-  max-width: 600px;
-  margin: auto;
+.no-show-div {
+  background-color: #ecfdff;
+  border: 1px #444 solid;
+  padding: 1rem;
+  color: #444;
 }
 
-img {
-  max-width: 200px;
+.error {
+  color: red;
 }

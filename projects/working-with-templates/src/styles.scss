@@ -3,11 +3,10 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 h1 {
-  color: #264d73;
+  color: #264D73;
   font-size: 2.5rem;
 }
-h2,
-h3 {
+h2, h3 {
   color: #444;
   font-weight: lighter;
 }
@@ -15,7 +14,7 @@ h3 {
   font-size: 1.3rem;
 }
 body {
-  padding: 0.5rem;
+  padding: .5rem;
   max-width: 1000px;
   margin: auto;
 }
@@ -24,8 +23,7 @@ body {
     padding: 2rem;
   }
 }
-body,
-input[text] {
+body, input[text] {
   color: #333;
   font-family: Cambria, Georgia, serif;
 }
@@ -68,7 +66,7 @@ nav a {
 
 nav a:hover {
   color: white;
-  background-color: #42545c;
+  background-color:  #42545C;
 }
 nav a.active {
   background-color: black;
@@ -80,5 +78,5 @@ hr {
 input[type="text"] {
   box-sizing: border-box;
   width: 100%;
-  padding: 0.5rem;
+  padding: .5rem;
 }

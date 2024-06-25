@@ -1,5 +1,11 @@
 import { Component } from '@angular/core';
-import { CUSTOMERS } from './customers';
+
+interface Item {
+  name: string;
+  manufactureDate: Date;
+  color?: string | null;
+  price: number;
+}
 
 @Component({
   selector: 'app-root',
@@ -7,16 +13,15 @@ import { CUSTOMERS } from './customers';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  customers = CUSTOMERS;
-  currentCustomer = 'Maria';
+  title = 'Template Expression Operators';
 
-  title = 'Featured Product';
-  itemImageUrl = '../assets/potted-plant.svg';
-  recommended = 'You might also like:';
+  item: Item = {
+    name: 'Telephone',
+    manufactureDate: new Date(1980, 1, 25),
+    color: 'orange',
+    price: 98,
+  };
 
-  itemImageUrl2 = '../assets/lamp.svg';
+  nullItem: Item | null = null;
 
-  getVal():number {
-    return 2;
-  }
 }
