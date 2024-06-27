@@ -1,63 +1,54 @@
-<h1 id="toc">Pipes</h1>
-<a href="#happy-birthday1">Happy Birthday v1</a>
-<a href="#birthday-date-pipe">Birthday DatePipe</a>
-<a href="#happy-birthday2">Happy Birthday v2</a>
-<a href="#birthday-pipe-chaining">Birthday Pipe Chaining</a>
-<a href="#power-booster">Power Booster custom pipe</a>
-<a href="#power-boost-calc">Power Boost Calculator custom pipe with params</a>
-<a href="#flying-heroes">Flying Heroes filter pipe (pure)</a>
-<a href="#flying-heroes-impure">Flying Heroes filter pipe (impure)</a>
-<a href="#hero-message">Async Hero Message and AsyncPipe</a>
-<a href="#hero-list">Hero List with caching FetchJsonPipe</a>
-<a href="#pipe-precedence">Pipes and Precedence</a>
-<hr>
+<div>
+  <h1>Property Binding with Angular</h1>
+  <h2>Binding the src property of an image:</h2>
+  <img src="assets/phone.svg" alt="item">
+  <hr />
 
-<h2 id="happy-birthday1">Hero Birthday v1</h2>
-<app-hero-birthday-one></app-hero-birthday-one>
-<hr>
+  <h2>Binding to the colSpan property</h2>
+  <table border=1>
+    <tr>
+      <td>Column 1</td>
+      <td>Column 2</td>
+    </tr>
+    <!-- Notice the colSpan property is camel case -->
+    <tr>
+      <td [colSpan]="2">Span 2 columns</td>
+    </tr>
+  </table>
+  <hr>
 
-<h2 id="birthday-date-pipe">Birthday DatePipe</h2>
-<p>The hero's birthday is {{ birthday | date }}</p>
-<p>The hero's birthday is {{ birthday | date:"MM/dd/yy" }} </p>
-<hr>
+  <h2>Button disabled state bound to isUnchanged property:</h2>
+  <!-- Bind button disabled state to `isUnchanged` property -->
+  <button type="button" [disabled]="isUnchanged">Disabled Button</button>
+  <hr>
 
-<h2 id="happy-birthday2">Hero Birthday v2</h2>
-<app-hero-birthday-two></app-hero-birthday-two>
-<hr>
+  <h2>Binding to a property of a directive</h2>
+  <p [ngClass]="classes">[ngClass] binding to the classes property making this blue</p>
+  <hr />
 
-<h2 id="birthday-pipe-chaining">Birthday Pipe Chaining</h2>
-<p>
-  The chained hero's birthday is
-  {{ birthday | date | uppercase}}
-</p>
+  <h2>Model property of a custom component:</h2>
+  <app-item-detail [childItem]="parentItem"></app-item-detail>
+  <app-item-detail childItem="parentItem"></app-item-detail>
 
-<p>
-  The chained hero's birthday is
-  {{ birthday | date:'fullDate' | uppercase}}
-</p>
-<p>
-  The chained hero's birthday is
-  {{ ( birthday | date:'fullDate' ) | uppercase}}
-</p>
-<hr>
+  <h3>Pass objects:</h3>
+  <app-item-list [items]="currentItems"></app-item-list>
+  <hr>
 
-<app-power-booster id="power-booster"></app-power-booster>
-<hr>
+  <h2>Property binding and interpolation</h2>
+  <p><img alt="Interpolated item" src="{{itemImageUrl}}"> is the <em>interpolated</em> image.</p>
+  <p><img alt="Property Bound item" [src]="itemImageUrl"> is the <em>property bound</em> image.</p>
 
-<app-power-boost-calculator id="power-boost-calc">loading</app-power-boost-calculator>
-<hr>
+  <p><span>"{{interpolationTitle}}" is the <em>interpolated</em> title.</span></p>
+  <p>"<span [innerHTML]="propertyTitle"></span>" is the <em>property bound</em> title.</p>
+  <hr />
 
-<app-flying-heroes id="flying-heroes"></app-flying-heroes>
-<hr>
+  <h2>Malicious content</h2>
 
-<app-flying-heroes-impure id="flying-heroes-impure"></app-flying-heroes-impure>
-<hr>
+  <p><span>"{{evilTitle}}" is the <em>interpolated</em> evil title.</span></p>
 
-<!-- async examples at the top so can see them in action -->
-<app-hero-async-message id="hero-message"></app-hero-async-message>
-<hr>
-
-<app-hero-list id="hero-list"></app-hero-list>
-<hr>
-
-<app-precedence id="pipe-precedence"></app-precedence>
+  <!--
+  Angular generates a warning for the following line as it sanitizes them
+  WARNING: sanitizing HTML stripped some content (see https://g.co/ng/security#xss).
+ -->
+  <p>"<span [innerHTML]="evilTitle"></span>" is the <em>property bound</em> evil title.</p>
+</div>

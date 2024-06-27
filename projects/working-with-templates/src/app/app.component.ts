@@ -1,11 +1,24 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Template Expression Operators';
+  title = 'Working with Templates';
 
-  birthday = new Date(1988, 3, 15); // April 15, 1988 -- since month parameter is zero-based
+  itemImageUrl = '../assets/phone.svg';
+  isUnchanged = true;
+  classes = 'special';
+  parentItem = 'lamp';
+
+  currentItems = [{
+    id: 21,
+    name: 'phone'
+  }];
+
+  interpolationTitle = 'Interpolation';
+  propertyTitle = 'Property binding';
+
+  evilTitle = 'Template <script>alert("evil never sleeps")</script> Syntax';
 }
