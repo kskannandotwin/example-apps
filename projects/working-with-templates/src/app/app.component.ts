@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Hero, heroes } from '../assets/hero';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,18 +8,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Working with Templates';
 
-  itemImageUrl = '../assets/phone.svg';
-  isUnchanged = true;
-  classes = 'special';
-  parentItem = 'lamp';
+  heroes = heroes;
+  hero: Hero | null = this.heroes[0];
+  showSad = true;
+  condition = false;
 
-  currentItems = [{
-    id: 21,
-    name: 'phone'
-  }];
-
-  interpolationTitle = 'Interpolation';
-  propertyTitle = 'Property binding';
-
-  evilTitle = 'Template <script>alert("evil never sleeps")</script> Syntax';
+  trackById(index: number, hero: Hero): number {
+    return hero.id;
+  }
 }
