@@ -1,5 +1,4 @@
 import { Component, ViewChild } from '@angular/core';
-import { Hero, heroes } from './hero';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,15 +7,5 @@ import { Hero, heroes } from './hero';
 export class AppComponent {
   title = 'Template Expression Operators';
 
-  heroes = heroes;
-  hero: Hero | null  = this.heroes[0];
-  heroTraits = ['honest', 'brave', 'considerate'];
-
-  attrDirs = true;
-  strucDirs = true;
-  divNgIf = false;
-
-  showId = true;
-  showDefaultTraits = true;
-  showSad = true;
+  birthday = new Date(1988, 3, 15); // April 15, 1988 -- since month parameter is zero-based
 }
