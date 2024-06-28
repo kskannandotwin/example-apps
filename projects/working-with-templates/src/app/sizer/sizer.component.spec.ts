@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HappyHeroComponent } from './happy-hero.component';
+import { SizerComponent } from './sizer.component';
 
-describe('HappyHeroComponent', () => {
-  let component: HappyHeroComponent;
-  let fixture: ComponentFixture<HappyHeroComponent>;
+describe('SizerComponent', () => {
+  let component: SizerComponent;
+  let fixture: ComponentFixture<SizerComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [HappyHeroComponent]
+      declarations: [SizerComponent]
     });
-    fixture = TestBed.createComponent(HappyHeroComponent);
+    fixture = TestBed.createComponent(SizerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
