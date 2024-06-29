@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SvgComponent } from './svg.component';
+import { ClickMeComponent } from './click-me.component';
 
-describe('SvgComponent', () => {
-  let component: SvgComponent;
-  let fixture: ComponentFixture<SvgComponent>;
+describe('ClickMeComponent', () => {
+  let component: ClickMeComponent;
+  let fixture: ComponentFixture<ClickMeComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SvgComponent]
+      declarations: [ClickMeComponent]
     });
-    fixture = TestBed.createComponent(SvgComponent);
+    fixture = TestBed.createComponent(ClickMeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

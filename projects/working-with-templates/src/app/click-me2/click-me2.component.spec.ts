@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HappyHeroComponent } from './happy-hero.component';
+import { ClickMe2Component } from './click-me2.component';
 
-describe('HappyHeroComponent', () => {
-  let component: HappyHeroComponent;
-  let fixture: ComponentFixture<HappyHeroComponent>;
+describe('ClickMe2Component', () => {
+  let component: ClickMe2Component;
+  let fixture: ComponentFixture<ClickMe2Component>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [HappyHeroComponent]
+      declarations: [ClickMe2Component]
     });
-    fixture = TestBed.createComponent(HappyHeroComponent);
+    fixture = TestBed.createComponent(ClickMe2Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
