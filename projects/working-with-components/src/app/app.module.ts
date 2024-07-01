@@ -4,11 +4,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PopupComponent } from './popup/popup.component';
+import { ClickDirective } from './click.directive';
+import { ItemDetailComponent } from './item-detail/item-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
-    PopupComponent
+    ClickDirective,
+    ItemDetailComponent
   ],
   imports: [
     BrowserModule,
