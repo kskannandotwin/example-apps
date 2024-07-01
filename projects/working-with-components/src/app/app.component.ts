@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { AdItem } from './ad-item';
-import { AdService } from './ad.service';
+import { Component, Injector } from '@angular/core';
+import { PopupService } from './popup.service';
+import { PopupComponent } from './popup/popup.component';
+import { createCustomElement } from '@angular/elements';
 
 @Component({
   selector: 'app-root',
@@ -10,11 +11,10 @@ import { AdService } from './ad.service';
 export class AppComponent {
   title = 'working-with-components';
 
-  ads: AdItem[] = [];
-
-  constructor(private adService: AdService) { }
-
-  ngOnInit() {
-    this.ads = this.adService.getAds();
+  constructor(injector: Injector, public popup: PopupService) {
+    // Convert `PopupComponent` to a custom element.
+    const PopupElement = createCustomElement(PopupComponent, { injector });
+    // Register the custom element with the browser.
+    customElements.define('popup-element', PopupElement);
   }
 }

@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeroJobAdComponent } from './hero-job-ad.component';
+import { PopupComponent } from './popup.component';
 
-describe('HeroJobAdComponent', () => {
-  let component: HeroJobAdComponent;
-  let fixture: ComponentFixture<HeroJobAdComponent>;
+describe('PopupComponent', () => {
+  let component: PopupComponent;
+  let fixture: ComponentFixture<PopupComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [HeroJobAdComponent]
+      declarations: [PopupComponent]
     });
-    fixture = TestBed.createComponent(HeroJobAdComponent);
+    fixture = TestBed.createComponent(PopupComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
