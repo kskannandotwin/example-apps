@@ -1,0 +1,15 @@
+import { Component, Input } from '@angular/core';
+import { Hero } from '../hero';
+
+@Component({
+  selector: 'app-hero-controls',
+  templateUrl: './hero-controls.component.html',
+  styleUrls: ['./hero-controls.component.scss']
+})
+export class HeroControlsComponent {
+  @Input() hero!: Hero;
+
+  activate() {
+    this.hero.active = true;
+  }
+}

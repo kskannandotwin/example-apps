@@ -3,36 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeroParentComponent } from './hero-parent/hero-parent.component';
-import { HeroChildComponent } from './hero-child/hero-child.component';
-import { NameParentComponent } from './name-parent/name-parent.component';
-import { NameChildComponent } from './name-child/name-child.component';
-import { VersionParentComponent } from './version-parent/version-parent.component';
-import { VersionChildComponent } from './version-child/version-child.component';
-import { VoteTakerComponent } from './vote-taker/vote-taker.component';
-import { VoterComponent } from './voter/voter.component';
-import { CountdownParentComponent } from './countdown-parent/countdown-parent.component';
-import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component';
-import { CountdownParentTwoComponent } from './countdown-parent-two/countdown-parent-two.component';
-import { MissionControlComponent } from './mission-control/mission-control.component';
-import { AstronautComponent } from './astronaut/astronaut.component';
+import { HeroMainComponent } from './hero-main/hero-main.component';
+import { QuestSummaryComponent } from './quest-summary/quest-summary.component';
+import { HeroDetailsComponent } from './hero-details/hero-details.component';
+import { HeroControlsComponent } from './hero-controls/hero-controls.component';
+import { HeroTeamComponent } from './hero-team/hero-team.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroParentComponent,
-    HeroChildComponent,
-    NameParentComponent,
-    NameChildComponent,
-    VersionParentComponent,
-    VersionChildComponent,
-    VoteTakerComponent,
-    VoterComponent,
-    CountdownParentComponent,
-    CountdownTimerComponent,
-    CountdownParentTwoComponent,
-    MissionControlComponent,
-    AstronautComponent
+    HeroMainComponent,
+    QuestSummaryComponent,
+    HeroDetailsComponent,
+    HeroControlsComponent,
+    HeroTeamComponent
   ],
   imports: [
     BrowserModule,
