@@ -1,5 +1,6 @@
-import { Component, HostBinding } from '@angular/core';
-import { Hero } from './hero';
+import { Component } from '@angular/core';
+import { AdItem } from './ad-item';
+import { AdService } from './ad.service';
 
 @Component({
   selector: 'app-root',
@@ -9,12 +10,11 @@ import { Hero } from './hero';
 export class AppComponent {
   title = 'working-with-components';
 
-  hero = new Hero(
-    'Human Torch',
-    ['Mister Fantastic', 'Invisible Woman', 'Thing']
-  );
+  ads: AdItem[] = [];
 
-  @HostBinding('class') get themeClass() {
-    return 'theme-light';
+  constructor(private adService: AdService) { }
+
+  ngOnInit() {
+    this.ads = this.adService.getAds();
   }
 }

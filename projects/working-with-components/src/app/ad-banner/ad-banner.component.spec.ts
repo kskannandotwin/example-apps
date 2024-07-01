@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeroMainComponent } from './hero-main.component';
+import { AdBannerComponent } from './ad-banner.component';
 
-describe('HeroMainComponent', () => {
-  let component: HeroMainComponent;
-  let fixture: ComponentFixture<HeroMainComponent>;
+describe('AdBannerComponent', () => {
+  let component: AdBannerComponent;
+  let fixture: ComponentFixture<AdBannerComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [HeroMainComponent]
+      declarations: [AdBannerComponent]
     });
-    fixture = TestBed.createComponent(HeroMainComponent);
+    fixture = TestBed.createComponent(AdBannerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

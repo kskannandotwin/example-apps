@@ -3,20 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeroMainComponent } from './hero-main/hero-main.component';
-import { QuestSummaryComponent } from './quest-summary/quest-summary.component';
-import { HeroDetailsComponent } from './hero-details/hero-details.component';
-import { HeroControlsComponent } from './hero-controls/hero-controls.component';
-import { HeroTeamComponent } from './hero-team/hero-team.component';
+import { AdBannerComponent } from './ad-banner/ad-banner.component';
+import { AdDirective } from './ad.directive';
+import { HeroProfileComponent } from './hero-profile/hero-profile.component';
+import { HeroJobAdComponent } from './hero-job-ad/hero-job-ad.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroMainComponent,
-    QuestSummaryComponent,
-    HeroDetailsComponent,
-    HeroControlsComponent,
-    HeroTeamComponent
+    AdBannerComponent,
+    AdDirective,
+    HeroProfileComponent,
+    HeroJobAdComponent
   ],
   imports: [
     BrowserModule,
