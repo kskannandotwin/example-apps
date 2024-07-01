@@ -12,7 +12,8 @@
     "start:tour-of-heroes": "ng serve --project=tour-of-heroes --port 4300",
     "start:first-app": "ng serve --project=first-app --port 4400",
     "start:angular-animation": "ng serve --project=angular-animation --port 4500",
-    "start:working-with-templates": "ng serve --project=working-with-templates --port 4200"
+    "start:working-with-templates": "ng serve --project=working-with-templates --port 4600",
+    "start:working-with-components": "ng serve --project=working-with-components --port 4200"
   },
   "private": true,
   "dependencies": {
