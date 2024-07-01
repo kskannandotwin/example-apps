@@ -1,5 +1,4 @@
 import { Component, Injector } from '@angular/core';
-import { Item } from './item';
 
 @Component({
   selector: 'app-root',
@@ -9,27 +8,30 @@ import { Item } from './item';
 export class AppComponent {
   title = 'working-with-components';
 
-  currentItem = {
-    name: 'Teapot'
-  }
-  clickMessage = '';
+  currentItem = 'Television';
+  lastChanceItem = 'Beanbag';
+  items = ['item1', 'item2', 'item3', 'item4'];
+  wishlist = ['Drone', 'Computer'];
 
-  onSave(event?: MouseEvent) {
-    const evtMsg = event ? ' Event target is ' + (event.target as HTMLElement).textContent : '';
-    alert('Saved.' + evtMsg);
-    if (event) { event.stopPropagation(); }
+  addItem(newItem: string) {
+    this.items.push(newItem);
   }
 
-  deleteItem(item: Item) {
-    alert(`Delete the ${item.name}.`);
+  crossOffItem(item: string) {
+    console.warn(`Parent says: crossing off ${item}.`);
   }
 
-  onClickMe(event?: MouseEvent) {
-    const evtMsg = event ? ' Event target class is ' + (event.target as HTMLElement).className : '';
-    alert('Click me.' + evtMsg);
+  buyClearanceItem(item: string) {
+    console.warn(`Parent says: buying ${item}.`);
   }
 
-  getValue(event: Event): string {
-    return (event.target as HTMLInputElement).value;
+  saveForLater(item: string) {
+    console.warn(`Parent says: saving ${item} for later.`);
+  }
+
+  addToWishList(wish: string) {
+    console.warn(`Parent says: adding ${this.currentItem} to your wishlist.`);
+    this.wishlist.push(wish);
+    console.warn(this.wishlist);
   }
 }
