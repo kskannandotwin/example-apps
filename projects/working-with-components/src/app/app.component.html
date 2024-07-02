@@ -1,40 +1,36 @@
-<h1>Inputs and Outputs</h1>
+<h1 id="top">Lifecycle Hooks</h1>
 
-<app-item-detail [item]="currentItem"></app-item-detail>
+<a href="#hooks">Peek-a-boo: (most) lifecycle hooks</a>
+<a href="#spy">Spy: directive with OnInit & OnDestroy</a>
+<a href="#onchanges">OnChanges</a>
+<a href="#docheck">DoCheck</a>
+<a href="#after-view">AfterViewInit & AfterViewChecked</a>
+<a href="#after-content">AfterContentInit & AfterContentChecked</a>
+<a href="#counter">Counter: OnChanges + Spy directive</a>
 
-<app-item-detail-metadata [item]="currentItem" [itemAvailability]="true"></app-item-detail-metadata>
-<hr>
+<app-peek-a-boo-parent id="hooks"></app-peek-a-boo-parent>
+<a href="#top">back to top</a>
+<hr />
 
-<app-item-output (newItemEvent)="addItem($event)"></app-item-output>
-<h3>Parent component receiving value via @Output()</h3>
+<app-spy-parent id="spy"></app-spy-parent>
+<a href="#top">back to top</a>
+<hr />
 
-<ul>
-    <li *ngFor="let item of items">{{item}}</li>
-</ul>
-<hr>
+<app-on-changes-parent id="onchanges"></app-on-changes-parent>
+<a href="#top">back to top</a>
+<hr />
 
-<h2>Input and Output together</h2>
-<p>Open the console to see the EventEmitter at work when you click Delete.</p>
+<app-do-check-parent id="docheck"></app-do-check-parent>
+<a href="#top">back to top</a>
+<hr />
 
-<app-input-output [item]="currentItem" (deleteRequest)="crossOffItem($event)">
-</app-input-output>
-<hr>
+<app-after-view-parent id="after-view"></app-after-view-parent>
+<a href="#top">back to top</a>
+<hr />
 
-<h2>Input and Output in the component class metadata</h2>
-<p>Open the console to see the EventEmitter at work when you click Buy.</p>
+<app-after-content-parent id="after-content"></app-after-content-parent>
+<a href="#top">back to top</a>
+<hr />
 
-<app-in-the-metadata [clearanceItem]="lastChanceItem" (buyEvent)="buyClearanceItem($event)">
-</app-in-the-metadata>
-<hr>
-
-<h2>Aliasing Inputs and Outputs</h2>
-<p>See aliasing.component.ts for aliases and the console for the EventEmitter console logs.</p>
-
-<app-aliasing [saveForLaterItem]="currentItem" [wishListItem]="currentItem" (saveForLaterEvent)="saveForLater($event)"
-    (wishEvent)="addToWishList($event)">
-</app-aliasing>
-
-<h2>Wishlist:</h2>
-<ul>
-    <li *ngFor="let wish of wishlist">{{wish}}</li>
-</ul>
+<app-counter-parent id="counter"></app-counter-parent>
+<a href="#top">back to top</a>
