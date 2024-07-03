@@ -1,39 +1,73 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
-import { APP_CONFIG, HERO_DI_CONFIG } from './app.config';
+// import { AppRoutingModule } from './app-routing.module';
+import { LocationStrategy,
+         HashLocationStrategy } from '@angular/common';
+import { NgModule } from '@angular/core';
+
+import { HeroData } from './hero-data';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+
+
 import { AppComponent } from './app.component';
-import { CarComponent } from './car/car.component';
-import { HeroesComponent } from './heroes/heroes.component';
-import { HeroesTspComponent } from './heroes/heroes-tsp.component';
-import { HeroListComponent } from './heroes/hero-list.component';
-import { InjectorComponent } from './injector.component';
-import { Logger } from './logger.service';
-import { TestComponent } from './test.component';
-import { UserService } from './user.service';
+import { HeroBioComponent } from './hero-bio.component';
+import { HeroBiosComponent,
+         HeroBiosAndContactsComponent } from './hero-bios.component';
+import { HeroOfTheMonthComponent } from './hero-of-the-month.component';
+import { HeroContactComponent } from './hero-contact.component';
+import { HeroesBaseComponent,
+         SortedHeroesComponent } from './sorted-heroes.component';
+import { HighlightDirective } from './highlight.directive';
+import { ParentFinderComponent,
+         AlexComponent,
+         AliceComponent,
+         CarolComponent,
+         ChrisComponent,
+         CraigComponent,
+         CathyComponent,
+         BarryComponent,
+         BethComponent,
+         BobComponent } from './parent-finder.component';
+import { StorageComponent } from './storage.component';
 
-import { ProvidersModule } from './providers.module';
+const declarations = [
+    AppComponent,
+    HeroBiosComponent, HeroBiosAndContactsComponent, HeroBioComponent,
+    HeroesBaseComponent, SortedHeroesComponent,
+    HeroOfTheMonthComponent, HeroContactComponent,
+    HighlightDirective,
+    ParentFinderComponent,
+];
+
+const componentListA = [ AliceComponent, AlexComponent ];
+
+const componentListB = [ BarryComponent, BethComponent, BobComponent ];
+
+const componentListC = [
+  CarolComponent, ChrisComponent, CraigComponent,
+  CathyComponent
+];
 
 @NgModule({
   imports: [
     BrowserModule,
-    ProvidersModule
+    FormsModule,
+    HttpClientModule,
+    InMemoryWebApiModule.forRoot(HeroData)
+    // AppRoutingModule TODO: add routes
   ],
   declarations: [
-    AppComponent,
-    CarComponent,
-    HeroesComponent,
-    HeroesTspComponent,
-    HeroListComponent,
-    InjectorComponent,
-    TestComponent
+    declarations,
+    componentListA,
+    componentListB,
+    componentListC,
+    StorageComponent,
   ],
+  bootstrap: [ AppComponent ],
   providers: [
-    Logger,
-    UserService,
-    { provide: APP_CONFIG, useValue: HERO_DI_CONFIG }
-  ],
-  exports: [ CarComponent, HeroesComponent ],
-  bootstrap: [ AppComponent ]
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
+  ]
 })
 export class AppModule { }
