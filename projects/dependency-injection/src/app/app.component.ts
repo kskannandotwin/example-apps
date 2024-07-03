@@ -1,18 +1,19 @@
-import { Component } from '@angular/core';
-
-import { LoggerService } from './logger.service';
-import { UserContextService } from './user-context.service';
+import { Component, OnInit } from '@angular/core';
+import { User, UserService } from './user.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+  providers: [UserService],
 })
-export class AppComponent {
-
-  private userId = 1;
-
-  constructor(logger: LoggerService, public userContext: UserContextService) {
-    userContext.loadUser(this.userId);
-    logger.logInfo('AppComponent initialized');
+export class AppComponent implements OnInit {
+  title = 'Users list';
+  users: User[] = [];
+  
+  constructor(private userService: UserService) {}
+  
+  ngOnInit(): void {
+    this.userService.getUsers().then(users => this.users = users);
   }
 }
