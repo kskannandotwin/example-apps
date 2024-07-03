@@ -1,18 +1,10 @@
-<label for="showHeroes">
-  <input id="showHeroes" type="checkbox" [checked]="showHeroes"   (change)="showHeroes=!showHeroes">
-  Heroes
-</label>
-<label for="showVillains">
-  <input id="showVillains" type="checkbox" [checked]="showVillains" (change)="showVillains=!showVillains">
-  Villains
-</label>
-<label for="showCars">
-  <input id="showCars" type="checkbox" [checked]="showCars"     (change)="showCars=!showCars">
-  Cars
-</label>
+<h2>From AppComponent:</h2>
 
-<h1>Hierarchical Dependency Injection</h1>
+<p>Emoji from FlowerService: {{flower.emoji}}</p>
+<p>Emoji from AnimalService: {{animal.emoji}}</p>
+<hr />
 
-<app-heroes-list *ngIf="showHeroes"></app-heroes-list>
-<app-villains-list *ngIf="showVillains"></app-villains-list>
-<app-cars *ngIf="showCars"></app-cars>
+<h2>From ChildComponent:</h2>
+<app-child>
+    <app-inspector></app-inspector>
+</app-child>

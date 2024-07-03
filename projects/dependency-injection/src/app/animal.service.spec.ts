@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { HeroTaxReturnService } from './hero-tax-return.service';
+import { AnimalService } from './animal.service';
 
-describe('HeroTaxReturnService', () => {
-  let service: HeroTaxReturnService;
+describe('AnimalService', () => {
+  let service: AnimalService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(HeroTaxReturnService);
+    service = TestBed.inject(AnimalService);
   });
 
   it('should be created', () => {
