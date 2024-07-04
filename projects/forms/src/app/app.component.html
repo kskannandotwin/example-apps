@@ -1,8 +1,9 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<h1>Forms Overview</h1>
+<h1>Reactive Forms</h1>
 
-<h2>Reactive</h2>
-<app-reactive-favorite-color></app-reactive-favorite-color>
+<nav>
+    <button type="button" (click)="toggleEditor('name')">Name Editor</button>
+    <button type="button" (click)="toggleEditor('profile')">Profile Editor</button>
+</nav>
 
-<h2>Template-Driven</h2>
-<app-template-favorite-color></app-template-favorite-color>
+<app-name-editor *ngIf="showNameEditor"></app-name-editor>
+<app-profile-editor *ngIf="showProfileEditor"></app-profile-editor>
