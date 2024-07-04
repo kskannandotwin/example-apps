@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChildComponent } from './child.component';
+import { SkipselfComponent } from './skipself.component';
 
-describe('ChildComponent', () => {
-  let component: ChildComponent;
-  let fixture: ComponentFixture<ChildComponent>;
+describe('SkipselfComponent', () => {
+  let component: SkipselfComponent;
+  let fixture: ComponentFixture<SkipselfComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ChildComponent]
+      declarations: [SkipselfComponent]
     });
-    fixture = TestBed.createComponent(ChildComponent);
+    fixture = TestBed.createComponent(SkipselfComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

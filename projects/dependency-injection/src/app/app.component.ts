@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FlowerService } from './flower.service';
-import { AnimalService } from './animal.service';
+import { LeafService } from './leaf.service';
 
 @Component({
   selector: 'app-root',
@@ -8,23 +8,6 @@ import { AnimalService } from './animal.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(public flower: FlowerService, public animal: AnimalService) {
-
-  }
+    constructor(public flower: FlowerService, public leaf: LeafService) { }
 }
 
-// When using @Host() together with @SkipSelf() in
-// child.component.ts for the AnimalService, add the
-// following viewProviders array to the @Component metadata:
-
-// viewProviders: [{ provide: AnimalService, useValue: { emoji: '🦔' } }]
-
-// So, the entire ChildComponent @Component() decorator and its
-// metadata should be as follows:
-
-// @Component({
-//   selector: 'app-root',
-//   templateUrl: './app.component.html',
-//   styleUrls: [ './app.component.css' ],
-//   viewProviders: [{ provide: AnimalService, useValue: { emoji: '🦔' } }]
-// })
