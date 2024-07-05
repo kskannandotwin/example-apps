@@ -1,0 +1,11 @@
+<h3 highlight>Customer Detail</h3>
+<div *ngIf="customer">
+    <div>Id: {{customer.id}}</div><br>
+    <label for="name">Name:
+        <input id="name" [value]="customer.name">
+        <!-- below is not working -->
+        <!-- <input id="name" [(ngModel)]="customer.name"> --> 
+    </label>
+</div>
+<br>
+<a routerLink="../">Customer List</a>
