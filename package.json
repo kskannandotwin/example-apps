@@ -15,7 +15,8 @@
     "start:working-with-templates": "ng serve --project=working-with-templates --port 4600",
     "start:working-with-components": "ng serve --project=working-with-components --port 4700",
     "start:forms": "ng serve --project=forms --port 4800",
-    "start:ng-modules": "ng serve --project=ng-modules --port 4200"
+    "start:ng-modules": "ng serve --project=ng-modules --port 4900",
+    "start:routing": "ng serve --project=routing --port 4200"
   },
   "private": true,
   "dependencies": {
