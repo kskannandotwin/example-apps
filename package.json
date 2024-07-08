@@ -18,7 +18,8 @@
     "start:ng-modules": "ng serve --project=ng-modules --port 4900",
     "start:routing": "ng serve --project=routing --port 5000",
     "start:documentation": "ng serve --project=documentation --port 5100",
-    "start:server-communication": "ng serve --project=server-communication --port 4200"
+    "start:server-communication": "ng serve --project=server-communication --port 5200",
+    "start:workflow": "ng serve --project=workflow --port 4200"
   },
   "private": true,
   "dependencies": {
