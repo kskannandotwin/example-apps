@@ -20,7 +20,8 @@
     "start:documentation": "ng serve --project=documentation --port 5100",
     "start:server-communication": "ng serve --project=server-communication --port 5200",
     "start:workflow": "ng serve --project=workflow --port 5300",
-    "start:testing": "ng serve --project=testing --port 4200"
+    "start:testing": "ng serve --project=testing --port 5400",
+    "start:hybrid-angular-applications": "ng serve --project=hybrid-angular-applications --port 4200"
   },
   "private": true,
   "dependencies": {
