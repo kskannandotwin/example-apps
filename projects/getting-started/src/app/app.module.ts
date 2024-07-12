@@ -11,6 +11,9 @@ import { ItemDetailsComponent } from './item-details/item-details.component';
 import { ItemAlertsComponent } from './item-alerts/item-alerts.component';
 import { ShippingComponent } from './shipping/shipping.component';
 import { CartComponent } from './cart/cart.component';
+import { DataComponent } from './data/data.component';
+import { ApiCallComponent } from './api-call/api-call.component';
+import { ApiObjectCallComponent } from './api-object-call/api-object-call.component';
 
 
 @NgModule({
@@ -27,7 +30,10 @@ import { CartComponent } from './cart/cart.component';
     ItemDetailsComponent,
     ItemAlertsComponent,
     ShippingComponent,
-    CartComponent
+    CartComponent,
+    DataComponent,
+    ApiCallComponent,
+    ApiObjectCallComponent
   ],
   bootstrap: [
     AppComponent
