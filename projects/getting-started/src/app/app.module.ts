@@ -5,7 +5,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { ItemDirective } from './item.directive';
+import { HeroListComponent } from './hero-list/hero-list.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { BackendService } from './backend.service';
+import { HeroService } from './hero.service';
+import { LoggerService } from './logger.service';
+import { SalesTaxComponent } from './sales-tax/sales-tax.component';
 
 
 @NgModule({
@@ -14,16 +19,17 @@ import { ItemDirective } from './item.directive';
     HttpClientModule,
     FormsModule,
     AppRoutingModule
-    // RouterModule.forRoot([
-    //   { path: '', component: ProductListComponent },
-    //   { path: 'products/:productId', component: ProductDetailsComponent },
-    //   { path: 'cart', component: CartComponent },
-    //   { path: 'shipping', component: ShippingComponent },
-    // ])
   ],
   declarations: [
     AppComponent,
-    ItemDirective
+    HeroListComponent,
+    HeroDetailComponent,
+    SalesTaxComponent
+  ],
+  providers: [
+    BackendService,
+    HeroService,
+    LoggerService
   ],
   bootstrap: [
     AppComponent
