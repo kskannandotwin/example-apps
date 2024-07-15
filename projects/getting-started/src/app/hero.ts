@@ -9,3 +9,13 @@ export class Hero {
         this.id = nextId++;
     }
 }
+
+export class Villain {
+    id!: number;
+    constructor(
+        public name: string,
+        public power?: string
+    ) {
+        this.id = nextId++;
+    }
+}

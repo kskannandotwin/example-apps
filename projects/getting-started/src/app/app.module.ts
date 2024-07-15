@@ -11,6 +11,8 @@ import { BackendService } from './backend.service';
 import { HeroService } from './hero.service';
 import { LoggerService } from './logger.service';
 import { SalesTaxComponent } from './sales-tax/sales-tax.component';
+import { VillainListComponent } from './villain-list/villain-list.component';
+import { VillainDetailComponent } from './villain-detail/villain-detail.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { SalesTaxComponent } from './sales-tax/sales-tax.component';
     AppComponent,
     HeroListComponent,
     HeroDetailComponent,
-    SalesTaxComponent
+    SalesTaxComponent,
+    VillainListComponent,
+    VillainDetailComponent
   ],
   providers: [
     BackendService,
