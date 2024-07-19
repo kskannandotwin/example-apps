@@ -1,5 +1,11 @@
-<div *ngIf="messageService.messages.length">
-    <h2>Messages</h2>
-    <button type="button" class="clear" (click)="messageService.clear()">Clear messages</button>
-    <div *ngFor="let message of messageService.messages">{{message}}</div>
+<div *ngIf="messageService.messagesHero.length">
+    <h2>Hero Messages</h2>
+    <button type="button" class="clear" (click)="messageService.clearHero()">Clear messages</button>
+    <div *ngFor="let messageH of messageService.messagesHero">{{messageH}}</div>
+</div>
+
+<div *ngIf="messageService.messagesVillain.length">
+    <h2>Villain Messages</h2>
+    <button type="button" class="clear" (click)="messageService.clearVillain()">Clear messages</button>
+    <div *ngFor="let messageV of messageService.messagesVillain">{{messageV}}</div>
 </div>
