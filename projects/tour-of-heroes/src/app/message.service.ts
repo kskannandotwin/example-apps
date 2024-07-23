@@ -5,15 +5,24 @@ import { Injectable } from '@angular/core';
 })
 export class MessageService {
 
-  messages: string[] = [];
+  messagesHero: string[] = [];
+  messagesVillain: string[] = [];
 
   constructor() { }
 
-  add(message: string) {
-    this.messages.push(message);
+  addHero(messageHero: string) {
+    this.messagesHero.push(messageHero);
   }
 
-  clear() {
-    this.messages = [];
+  addVillain(messageVillain: string) {
+    this.messagesVillain.push(messageVillain);
+  }
+
+  clearHero() {
+    this.messagesHero = [];
+  }
+
+  clearVillain() {
+    this.messagesVillain = [];
   }
 }
