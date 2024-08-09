@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TwoComponent } from './two.component';
+import { OpenCloseComponent } from './open-close.component';
 
-describe('TwoComponent', () => {
-  let component: TwoComponent;
-  let fixture: ComponentFixture<TwoComponent>;
+describe('OpenCloseComponent', () => {
+  let component: OpenCloseComponent;
+  let fixture: ComponentFixture<OpenCloseComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TwoComponent]
+      declarations: [OpenCloseComponent]
     });
-    fixture = TestBed.createComponent(TwoComponent);
+    fixture = TestBed.createComponent(OpenCloseComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

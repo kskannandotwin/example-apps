@@ -4,16 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
-import { OneComponent } from './one/one.component';
-import { TwoComponent } from './two/two.component';
-import { ThreeComponent } from './three/three.component';
+import { OpenCloseComponent } from './open-close/open-close.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    OneComponent,
-    TwoComponent,
-    ThreeComponent
+    OpenCloseComponent
   ],
   imports: [
     BrowserModule,
