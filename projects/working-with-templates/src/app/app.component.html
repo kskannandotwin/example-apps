@@ -3,4 +3,5 @@
   Enter an example progress value
   <input type="number" id="progress-value" min="0" max="100" [value]="progress" (input)="setProgress($event)">
 </label>
-<app-example-progressbar [value]="progress" aria-label="Example of a progressbar"></app-example-progressbar>
+<!-- <app-example-progressbar [value]="progress" aria-label="Example of a progressbar"></app-example-progressbar> -->
+ <app-progress-bar [value]="progress"></app-progress-bar>
