@@ -4,12 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
-import { EnterLeaveComponent } from './enter-leave/enter-leave.component';
+import { AutoCalculationComponent } from './auto-calculation/auto-calculation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EnterLeaveComponent
+    AutoCalculationComponent
   ],
   imports: [
     BrowserModule,
