@@ -4,12 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
-import { StatusSliderComponent } from './status-slider/status-slider.component';
+import { EnterLeaveComponent } from './enter-leave/enter-leave.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StatusSliderComponent
+    EnterLeaveComponent
   ],
   imports: [
     BrowserModule,
