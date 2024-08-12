@@ -1,0 +1,15 @@
+<!-- <input [(ngModel)]="filterText" placeholder="Filter items..." />
+<div class="item-list">
+    <div *ngFor="let item of filteredItems" @listAnimation>{{ item }}</div>
+</div> -->
+
+<!-- <button (click)="addItem()">Add Item</button>
+<div class="item-list">
+    <div *ngFor="let item of items" @staggerAnimation>{{ item }}</div>
+</div> -->
+
+<button (click)="addItem()">Add Item</button>
+<button (click)="removeItem()">Remove Item</button>
+<div class="item-list">
+    <div *ngFor="let item of items" @listAnimation>{{ item }}</div>
+</div>
