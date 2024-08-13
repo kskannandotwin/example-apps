@@ -6,11 +6,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { FilterStaggerComponent } from './filter-stagger/filter-stagger.component';
+import { StaggerComponent } from './stagger/stagger.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FilterStaggerComponent
+    FilterStaggerComponent,
+    StaggerComponent
   ],
   imports: [
     BrowserModule,

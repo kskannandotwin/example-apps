@@ -1,0 +1,12 @@
+<!-- <div class="container">
+    <div class="textBox">
+        <input type="text" (keyup.enter)="AddOption()" [(ngModel)]="optionVal">
+    </div>
+    <div class="options">
+        <div @fadeIn class="option" *ngFor="let option of options" (click)="RemoveOption(option)">{{option}}</div>
+    </div>
+</div> -->
+
+<div [@stagger] *ngIf='show'>
+    <div *ngFor="let item of items">{{ item }}</div>
+</div>
