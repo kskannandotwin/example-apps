@@ -1,12 +1,15 @@
-<!-- <div class="container">
-    <div class="textBox">
-        <input type="text" (keyup.enter)="AddOption()" [(ngModel)]="optionVal">
-    </div>
-    <div class="options">
-        <div @fadeIn class="option" *ngFor="let option of options" (click)="RemoveOption(option)">{{option}}</div>
-    </div>
-</div> -->
+<button (click)="show = !show">toggle</button>
+<button (click)="toggleList()">toggle list</button>
+<button (click)="toggleImages()">toggle images</button>
 
-<div [@stagger] *ngIf='show'>
-    <div *ngFor="let item of items">{{ item }}</div>
-</div>
+<h1 @fadeAnimation *ngIf="show">Angular Animations</h1>
+
+<ul [@listAnimation]="items.length" class="items">
+    <li *ngFor="let item of items" class="item">
+        Item {{item}}
+    </li>
+</ul>
+
+<section [@listAnimation]="images.length" class="images">
+    <img *ngFor="let img of images" [src]="img" class="image" alt="Cat" />
+</section>
