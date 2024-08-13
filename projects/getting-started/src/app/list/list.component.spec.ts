@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StaggerComponent } from './stagger.component';
+import { ListComponent } from './list.component';
 
-describe('StaggerComponent', () => {
-  let component: StaggerComponent;
-  let fixture: ComponentFixture<StaggerComponent>;
+describe('ListComponent', () => {
+  let component: ListComponent;
+  let fixture: ComponentFixture<ListComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [StaggerComponent]
+      declarations: [ListComponent]
     });
-    fixture = TestBed.createComponent(StaggerComponent);
+    fixture = TestBed.createComponent(ListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

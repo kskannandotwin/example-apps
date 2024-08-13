@@ -1,0 +1,35 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span>Contact</span>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-grid-list cols="4" rowHeight="150px">
+    <mat-grid-tile class="block" *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows"
+        [style.background]="tile.color">
+        <div [innerHTML]="tile.text"></div>
+    </mat-grid-tile>
+</mat-grid-list>
+
+
+
+<mat-list>
+    <h3 mat-subheader>Folders</h3>
+    <mat-list-item *ngFor="let folder of [1,2,3]; last as last">
+        <mat-icon mat-list-icon>folder</mat-icon>
+        <h4 mat-line>Folder Name</h4>
+        <p mat-line class="demo-2">folder.updated</p>
+        <mat-divider [inset]="true" *ngIf="!last"></mat-divider>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <h3 md-subheader>Notes</h3>
+    <mat-list-item *ngFor="let note of [1,2,3]">
+        <mat-icon md-list-icon>note</mat-icon>
+        <h4 md-line>note.name</h4>
+        <p md-line class="demo-2">note.updated</p>
+    </mat-list-item>
+</mat-list>
+
+<br />
+
+<app-list></app-list>

@@ -3,19 +3,30 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
-import { StaggerComponent } from './stagger/stagger.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { HomeComponent } from './home/home.component';
+import { ListComponent } from './list/list.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { SharedModule } from './shared/shared.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StaggerComponent
+    AboutComponent,
+    ContactComponent,
+    HomeComponent,
+    ListComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    SharedModule,
     AppRoutingModule
   ],
   providers: [],

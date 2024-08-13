@@ -1,0 +1,50 @@
+.section {
+  margin: 1rem 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: stretch;
+  flex-grow: 1;
+}
+
+.block {
+  flex: 1;
+  min-width: 25%;
+  height: 150px;
+  margin-bottom: 1rem;
+}
+
+.xs-6 {
+  min-width: 50%;
+}
+
+mat-card {
+  margin: 0.5rem;
+  height: 100%;
+  padding: 0;
+}
+
+@media (min-width: 500px) {
+  .block {
+    height: 150px;
+    margin-bottom: 1rem;
+  }
+  .sm-8 {
+    min-width: 66.6%;
+  }
+}
+
+@media (min-width: 768px) {
+  .block {
+    height: 220px;
+    margin-bottom: 1rem;
+  }
+
+  .md-6 {
+    min-width: 50%;
+  }
+
+  .md-8 {
+    min-width: 66.6%;
+  }
+}

@@ -1,0 +1,17 @@
+<!-- list.component.html -->
+
+<mat-card>
+    <button mat-button (click)="toggle()">Show / Hide Items</button>
+
+
+    <mat-selection-list #shoes [@listTransition]="items.length" class="list">
+        <mat-list-option *ngFor="let i of items">
+            {{i}}
+        </mat-list-option>
+    </mat-selection-list>
+
+    <p>
+        Options selected: {{shoes.selectedOptions.selected.length}}
+    </p>
+
+</mat-card>
