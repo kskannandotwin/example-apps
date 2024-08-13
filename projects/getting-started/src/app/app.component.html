@@ -1,2 +1,8 @@
 <!-- <app-filter-stagger></app-filter-stagger> -->
- <app-stagger></app-stagger>
+<button (click)="toggle()">Show / Hide Items</button>
+<hr />
+<div [@listAnimation]="items.length">
+  <div *ngFor="let item of items">
+    <app-stagger></app-stagger>
+  </div>
+</div>

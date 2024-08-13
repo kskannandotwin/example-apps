@@ -1,23 +1,4 @@
-.items {
-  margin: 0;
-  padding: 0;
-}
-
-.item {
-  background-color: #f2f1fc;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-bottom: 0;
-  list-style: none;
-}
-
-.item:last-child {
-  border-bottom: 1px solid #ccc;
-}
-
-.image {
-  float: left;
-  height: 140px;
-  width: 140px;
-  object-fit: cover;
+p {
+  border: 1px solid black;
+  width: 40%;
 }
