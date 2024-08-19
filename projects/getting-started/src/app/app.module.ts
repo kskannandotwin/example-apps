@@ -12,6 +12,7 @@ import { ListComponent } from './list/list.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { SharedModule } from './shared/shared.module';
 import { FormsModule } from '@angular/forms';
+import { ReverseStaggerComponent } from './reverse-stagger/reverse-stagger.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     ContactComponent,
     HomeComponent,
     ListComponent,
-    NavBarComponent
+    NavBarComponent,
+    ReverseStaggerComponent
   ],
   imports: [
     BrowserModule,
